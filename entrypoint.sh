@@ -65,7 +65,7 @@ if [ ! -f /var/lib/mysql/ibdata1 ]; then
     fi
 
     echo
-    echo "MySQL init process done. Ready for start up."
+    echo "MySQL is ready."
 fi
 
 exec "$@"

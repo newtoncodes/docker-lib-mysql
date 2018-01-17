@@ -16,6 +16,7 @@ COPY entrypoint.sh /usr/bin/entrypoint
 RUN chmod +x /usr/bin/entrypoint
 
 ENTRYPOINT ["/usr/bin/entrypoint"]
+CMD ["mysqld"]
 
 VOLUME ["/var/lib/mysql", "/var/log/mysql"]
 EXPOSE 3306

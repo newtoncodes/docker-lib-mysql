@@ -10,7 +10,7 @@ RUN rm -rf /var/lib/mysql && mkdir -p /var/lib/mysql /var/run/mysqld
 RUN mkdir -p /var/lib/mysql
 RUN chown -R mysql:mysql /var/lib/mysql /var/log/mysql /var/run/mysqld && chmod 777 /var/run/mysqld
 
-COPY config/mysql.cnf /etc/mysql/mysql.conf.d/mysqld.cnf
+COPY config /etc/mysql/mysql.conf.d/mysqld.cnf
 
 COPY entrypoint.sh /usr/bin/entrypoint
 RUN chmod +x /usr/bin/entrypoint
